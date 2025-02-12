@@ -1,7 +1,9 @@
 let express = require("express");
 let cors = require("cors");
 let app = express();
-app.use(cors());
+app.use(cors({
+    origin: 'http://localhost:5173',
+}));
 app.use(express.json());
 let dotenv = require("dotenv");
 const userRouter = require("./routes/userRoute");
