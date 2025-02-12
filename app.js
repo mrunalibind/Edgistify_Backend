@@ -1,5 +1,7 @@
 let express = require("express");
+let cors = require("cors");
 let app = express();
+app.use(cors());
 app.use(express.json());
 let dotenv = require("dotenv");
 const userRouter = require("./routes/userRoute");
@@ -29,3 +31,5 @@ app.listen(process.env.PORT, async() => {
     }
     console.log("Server is running on port", process.env.PORT);
 });
+
+// https://edgistify-backend-oh53.onrender.com/
