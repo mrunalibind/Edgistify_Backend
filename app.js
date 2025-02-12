@@ -36,3 +36,4 @@ app.listen(process.env.PORT, async() => {
 });
 
 // https://edgistify-backend-oh53.onrender.com/
+// https://edgistify-frontend.onrender.com/
