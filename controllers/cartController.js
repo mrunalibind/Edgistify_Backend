@@ -4,7 +4,7 @@ const Product = require("../models/product");
 const getCartProduct = async (req, res) => {
 
     try {
-        let products = await Cart.find({userID: req.user._id}); 
+        let products = await Cart.find({userID: req.user._id}).populate("productID"); 
         res.status(200).json({
             products
         });
