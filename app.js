@@ -2,7 +2,7 @@ let express = require("express");
 let cors = require("cors");
 let app = express();
 app.use(cors({
-    origin: 'https://edgistify-frontend.onrender.com/',
+    origin: 'https://edgistify-frontend.onrender.com',
     credentials: true,
 }));
 app.use(express.json());
