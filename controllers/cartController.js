@@ -1,6 +1,19 @@
 const Cart = require("../models/cart");
 const Product = require("../models/product");
 
+const getCartProduct = async (req, res) => {
+
+    try {
+        let products = await Cart.find({userID: req.user._id}); 
+        res.status(200).json({
+            products
+        });
+    } catch (error) {
+        res.status(500).json({
+            error: error.message,
+        }); 
+    }
+};
 const addProductToCart = async (req, res) => {
     let { productID, quantity, price } = req.body;
 
@@ -33,4 +46,4 @@ const addProductToCart = async (req, res) => {
     }
 };
 
-module.exports = { addProductToCart };
+module.exports = { getCartProduct, addProductToCart };
