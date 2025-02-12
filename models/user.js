@@ -14,7 +14,7 @@ let userSchema = mongoose.Schema({
         required: true, 
     }
 }, { timestamps: true });
-let User = mongoose.model("user", userSchema);
+let User = mongoose.model("User", userSchema);
 
 userSchema.index({ email: 1, password: 1 }, (err) => {
     if (err) {

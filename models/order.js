@@ -41,7 +41,7 @@ let orderSchema = mongoose.Schema({
         default: "Pending",
     },
 }, { timestamps: true });
-let Order = mongoose.model("order", orderSchema);
+let Order = mongoose.model("Order", orderSchema);
 
 orderSchema.index({ userID: 1 }, (err) => {
     if (err) {

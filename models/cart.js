@@ -20,7 +20,7 @@ let cartSchema = mongoose.Schema({
         required: true,
     }
 }, { timestamps: true });
-let Cart = mongoose.model("cart", cartSchema);
+let Cart = mongoose.model("Cart", cartSchema);
 
 cartSchema.index({ userID: 1 }, (err) => {
     if (err) {

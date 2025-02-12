@@ -27,5 +27,5 @@ let productSchema = mongoose.Schema({
 
 productSchema.plugin(mongoosePaginate);
 
-let Product = mongoose.model("product", productSchema);
+let Product = mongoose.model("Product", productSchema);
 module.exports = Product;
